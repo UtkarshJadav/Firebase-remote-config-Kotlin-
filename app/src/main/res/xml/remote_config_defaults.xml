@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+
+    <entry>
+        <key>lbl_demo</key>
+        <value>Demo</value>
+    </entry>
+
+    <entry>
+        <key>lbl_message</key>
+        <value>Message</value>
+    </entry>
+
+</defaultsMap>

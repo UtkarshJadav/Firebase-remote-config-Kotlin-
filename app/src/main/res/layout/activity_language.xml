@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.utkarsh.firebaseremoteconfigdemo.IConfigConstantsKt" />
+
+        <variable
+            name="firebaseConfig"
+            type="com.google.firebase.remoteconfig.FirebaseRemoteConfig" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Language">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{firebaseConfig.getInstance().getString(IConfigConstantsKt.LBL_DEMO)}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{firebaseConfig.getInstance().getString(IConfigConstantsKt.LBL_MESSAGE)}"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvDemo"
+            app:layout_constraintStart_toStartOf="@+id/tvDemo"
+            app:layout_constraintTop_toBottomOf="@+id/tvDemo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

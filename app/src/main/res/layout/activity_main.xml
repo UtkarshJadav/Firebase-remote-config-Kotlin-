@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.utkarsh.firebaseremoteconfigdemo.IConfigConstantsKt" />
+
+        <variable
+            name="firebaseConfig"
+            type="com.google.firebase.remoteconfig.FirebaseRemoteConfig" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBanner"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHindi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="@{firebaseConfig.getInstance().getString(IConfigConstantsKt.LBL_HINDI)}"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="@{firebaseConfig.getInstance().getString(IConfigConstantsKt.LBL_ENGLISH)}"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/btnHindi"
+            app:layout_constraintStart_toStartOf="@+id/btnHindi"
+            app:layout_constraintTop_toBottomOf="@+id/btnHindi" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGujarati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="@{firebaseConfig.getInstance().getString(IConfigConstantsKt.LBL_GUJARATI)}"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/btnEnglish"
+            app:layout_constraintStart_toStartOf="@+id/btnEnglish"
+            app:layout_constraintTop_toBottomOf="@+id/btnEnglish" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTables"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="@{firebaseConfig.getInstance().getString(IConfigConstantsKt.PRINT_TABLE)}"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/btnGujarati"
+            app:layout_constraintStart_toStartOf="@+id/btnGujarati"
+            app:layout_constraintTop_toBottomOf="@+id/btnGujarati" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

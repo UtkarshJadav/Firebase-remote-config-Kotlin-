@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "865981918321",
+    "project_id": "rcdemo-18973",
+    "storage_bucket": "rcdemo-18973.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865981918321:android:58b45df3853347d1317fd0",
+        "android_client_info": {
+          "package_name": "com.utkarsh.firebaseremoteconfigdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865981918321-ksjl44ll68ir8u3crr7sd6dusqlvb1d8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXCutp8Zi48ouDz1WnU-cLZMzQMRG_8yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865981918321-ksjl44ll68ir8u3crr7sd6dusqlvb1d8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
